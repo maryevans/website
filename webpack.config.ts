@@ -7,6 +7,23 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+        include: [
+          path.join(__dirname, 'src'),
+          /node_modules/
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 100000,
+          },
+        },
+      },
+      {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {

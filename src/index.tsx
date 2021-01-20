@@ -1,14 +1,16 @@
-import { Button } from "@fluentui/react";
+
 import React from "react";
 import ReactDOM from "react-dom";
+import 'semantic-ui-css/semantic.min.css';
+import { Container } from "semantic-ui-react";
 
 const App = () => (
-    <h1>
-        My React and TypeScript App! {" "}
-        {new Date().toLocaleDateString()}
-        <button>button</button>
-        <Button>Wow</Button>
-    </h1>
+  <div>
+    <Container textAlign='center'>
+      Center Alignment
+    </Container>
+
+  </div>
 );
 
 ReactDOM.render(
